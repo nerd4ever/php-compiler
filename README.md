@@ -26,8 +26,17 @@ Diretórios do PHP
 ````
 > O /usr/bin/php usa a versão 8.1 nessa compilação
 
-# Headers do php disponível em
+phpize
 
+````
+/usr/bin/phpize8.1 
+/usr/bin/phpize8.0 
+/usr/bin/phpize7.4 
+/usr/bin/phpize7.3 
+/usr/bin/phpize7.2 
+/usr/bin/phpize7.1
+````
+Headers do php disponível em
 ````
 /usr/include/php/20160303
 /usr/include/php/20210902
