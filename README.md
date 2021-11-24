@@ -45,3 +45,8 @@ Headers do php disponível em
 /usr/include/php/20180731
 /usr/include/php/20170718
 ````
+
+Comando para exibir versões do phpize instalado
+````
+/usr/local/bin/entrypoint versions
+````
