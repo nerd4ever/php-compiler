@@ -45,5 +45,4 @@ RUN dos2unix /usr/local/bin/entrypoint \
 
 WORKDIR /workspace
 
-ENTRYPOINT ["/usr/local/bin/entrypoint"]
-CMD ["start"]
+CMD ["tail", "-f", "/var/log/lastlog"]
