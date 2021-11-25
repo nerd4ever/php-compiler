@@ -39,9 +39,9 @@ RUN apt-get install -y php8.1 php8.1-bcmath php8.1-bz2 php8.1-cgi php8.1-cli php
 
 RUN apt-get clean
 
-COPY entrypoint.sh /usr/local/bin/entrypoint
-RUN dos2unix /usr/local/bin/entrypoint \
-    && chmod +x /usr/local/bin/entrypoint
+COPY entrypoint.sh /entrypoint
+RUN dos2unix /entrypoint \
+    && chmod +x /entrypoint
 
 WORKDIR /workspace
 
