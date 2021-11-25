@@ -1,4 +1,5 @@
 FROM debian:10
+ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install wget apt-transport-https lsb-release ca-certificates sudo -y
 RUN wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg \
     && echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee /etc/apt/sources.list.d/php.list
@@ -41,7 +42,7 @@ RUN apt-get clean
 COPY entrypoint.sh /usr/local/bin/entrypoint
 RUN dos2unix /usr/local/bin/entrypoint \
     && chmod +x /usr/local/bin/entrypoint
-    
+
 WORKDIR /workspace
 
 ENTRYPOINT ["/usr/local/bin/entrypoint"]
