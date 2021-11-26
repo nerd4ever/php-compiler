@@ -36,17 +36,3 @@ phpize
 /usr/bin/phpize7.2 
 /usr/bin/phpize7.1
 ````
-Headers do php disponível em
-````
-/usr/include/php/20160303
-/usr/include/php/20210902
-/usr/include/php/20200930
-/usr/include/php/20190902
-/usr/include/php/20180731
-/usr/include/php/20170718
-````
-
-Comando para exibir versões do phpize instalado
-````
-/usr/local/bin/entrypoint versions
-````
