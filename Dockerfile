@@ -15,7 +15,6 @@ RUN apt-get update && apt-get install -y \
     libssl-dev \
     curl \
     dos2unix \
-    build-essential \
     cmake \
     doxygen \
     doxygen-doc \
@@ -33,10 +32,8 @@ RUN apt-get update && apt-get install -y \
     flex \
     re2c \
     rsync
-    
+
 RUN wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg \
-    && echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee /etc/apt/sources.list.d/php.list \
-    && wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg \
     && echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee /etc/apt/sources.list.d/php.list
 
 RUN apt update
