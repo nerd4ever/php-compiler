@@ -27,6 +27,7 @@ RUN apt-get update && apt-get install -y \
     libcunit1 \
     automake \
     autoconf \
+    pkg-config \
     libtool \
     bison \
     flex \
