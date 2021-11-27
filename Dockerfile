@@ -24,6 +24,7 @@ RUN apt-get update && apt-get install -y \
     libcurl4-openssl-dev \
     libcurl4 \
     libcunit1-dev \
+    libpthread-stubs0-dev \
     libcunit1 \
     automake \
     autoconf \
@@ -32,12 +33,11 @@ RUN apt-get update && apt-get install -y \
     bison \
     flex \
     re2c \
-    rsync
-
-RUN wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg \
-    && echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee /etc/apt/sources.list.d/php.list
-
-RUN apt update
+    rsync \
+    sqlite3 \
+    libsqlite3-dev \
+    libxml2-dev \
+    git
 
 RUN apt-get install -y \
     php7.1-dev \

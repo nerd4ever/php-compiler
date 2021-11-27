@@ -2,9 +2,12 @@ version: "2"
 services:
  c-compiler: 
   build: .
+  privileged: true
+  cap_add:
+  - ALL
   ports:
     - "22022:22"
   volumes:
-    - "/home/sobrito/Workspace/kaya-for-php:/workspace"
+    - "vol:/workspace"
 volumes:
   vol:
