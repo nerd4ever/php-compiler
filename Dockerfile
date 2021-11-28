@@ -39,6 +39,11 @@ RUN apt-get update && apt-get install -y \
     libxml2-dev \
     git
 
+RUN wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg \
+    && echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee /etc/apt/sources.list.d/php.list
+
+RUN apt-get update
+
 RUN apt-get install -y \
     php7.1-dev \
     php7.2-dev \
